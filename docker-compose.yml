@@ -1,0 +1,17 @@
+services:
+  bot:
+    image: ${IMAGE_REF}
+    container_name: globe
+    restart: always
+    environment:
+      - ALGEM531_URL=${ALGEM531_URL}
+      - ALGEM532_URL=${ALGEM532_URL}
+      - INF531_URL=${INF531_URL}
+      - INF532_URL=${INF532_URL}
+      - MATHS531_URL=${MATHS531_URL}
+      - MATHS532_URL=${MATHS532_URL}
+      - PROG531_URL=${PROG531_URL}
+      - PROG532_URL=${PROG532_URL}
+      - TELEGRAM_TOKEN=${TELEGRAM_TOKEN}
+    ports:
+      - "8501:8501"
